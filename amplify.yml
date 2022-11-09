@@ -8,6 +8,9 @@ frontend:
       commands: 
         - echo "VITE_ENDPOINT_LAMBDA_CDK=$ENDPOINT" >> .env
         - echo "VITE_LAMBDA_REGION=$REGION" >> .env
+        - echo "VITE_APP_IDENTITY_POOL_ID=$IDENTITY_POOL_ID" >> .env
+        - echo "VITE_APP_USER_POOL_CLIENT_ID=$USER_POOL_CLIENT_ID" >> .env
+        - echo "VITE_APP_USER_POOL_ID=$USER_POOL_ID" >> .env 
         - yarn build
   artifacts:
     baseDirectory: dist
