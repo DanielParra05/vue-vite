@@ -6,11 +6,7 @@ defineProps<{ msg: string }>()
 const count = ref(0);
 
 async function getLambdaResult() {
-  const response = await fetch(`${import.meta.env.VITE_ENDPOINT_LAMBDA_CDK}lambda`, {
-    mode: 'cors'
-  });
-  const responseData = await response.text();
-  console.log(responseData)
+  console.log("Not lambda in dev environment")
 }
 </script>
 
