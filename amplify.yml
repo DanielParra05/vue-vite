@@ -6,6 +6,8 @@ frontend:
         - yarn install
     build:
       commands: 
+        - echo "VITE_ENDPOINT_LAMBDA_CDK=$ENDPOINT" >> .env
+        - echo "VITE_LAMBDA_REGION=$REGION" >> .env
         - yarn build
   artifacts:
     baseDirectory: dist
